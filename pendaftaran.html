@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran</title>
+</head>
+<body>
+    <form >
+        <h1> From Pendaftaran MSIB 2023 </h1>
+        <label for="nama">Nama Lengkap:</label>
+        <br />
+        <input type="text" id="nama" name="nama" required>
+       <br /> <br />
+        <label for="email">Email:</label>
+        <br />
+        <input type="email" id="email" name="email" required>
+       <br /><br />
+        <label for="nohp">Nomor Telepon:</label>
+        <br />
+        <input type="tel" id="nohp" name="nohp" required>
+        <br  /><br  />
+        <label for="jenis_kelamin">Jenis Kelamin:</label>
+        <br />
+        <input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki" required>
+        <label for="laki_laki">Laki-laki</label>
+        <br  />
+        <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" required>
+        <label for="perempuan">Perempuan</label>
+       <br /><br />
+        <label for="jurusan">Jurusan:</label>
+        <br>
+        <select id="jurusan" name="jurusan" required>
+          <option value="">Pilih Jurusan</option>
+          <option value="Teknik Informatika">Teknik Informatika</option>
+          <option value="Sistem Informasi">Sistem Informasi</option>
+          <option value="Teknik Elektro">Teknik Elektro</option>
+          <option value="Teknik Industri">Teknik Industri</option>
+        </select>
+        <br /><br />
+      
+        <label for="alamat">Alamat:</label>
+        <br />
+        <textarea id="alamat" name="alamat" required></textarea>
+       <br  /><br  />
+        <label for="file">File:</label>
+        <br />
+        <input type="file" id="file" name="file">
+       <br /> 
+        <input type="submit" value="Daftar">
+      </form>
+      
+</body>
+</html>
