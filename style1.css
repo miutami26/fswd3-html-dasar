@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+:root {
+  --bg-color-1: #5a5a5aa4;
+  --bg-color-2: #5a5a5aa4;
+  --card-bg-color: #5a5a5aa4;
+  --border-color-1: #FF7F50;
+  --border-color-2: #87CEFA;
+  --border-color-3: #252525e9;
+}
+body{
+	background-color: #5a5a5aa4;
+}
+
+h1{
+	text-align: center;
+}
+.gallery {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.row {
+  display: block;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+
+.card {
+  float: left;
+  width: 25%;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  border: 5px solid var(--border-color-1);
+}
+
+#img2{
+	width: 100%;
+	border-radius: 10px;
+	border: 5px solid var(--border-color-2);
+
+}
+
+
+
+.card:hover img {
+  border-color: var(--border-color-3);
+}
+.card:hover #img2 {
+	border-color: var(--border-color-3);
+  }
+
+.description {
+  margin-top: 1rem;
+}
+
+.description h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.description p {
+  font-size: 1rem;
+  font-family: 'Tilt Neon', cursive;
+}
