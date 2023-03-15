@@ -1,0 +1,51 @@
+<script>
+  alert("Selamat Datang Pemainan kertas batu gunting");
+
+  let response = prompt("Silahkan Tulis Nama Mu");
+  alert("" + response);
+
+  alert("Permainan Dimulai");
+
+  let playerChoice = prompt("Pilih antara gunting, batu atau kertas");
+  let computerChoice = Math.random();
+  if (computerChoice < 0.34) {
+    computerChoice = "gunting";
+  } else if (computerChoice <= 0.67) {
+    computerChoice = "batu";
+  } else {
+    computerChoice = "kertas";
+  }
+  alert(
+    "Kamu memilih " +
+      playerChoice +
+      ", dan Komputer memilih " +
+      computerChoice +
+      "."
+  );
+
+  let result = "";
+  if (playerChoice === computerChoice) {
+    result = "Hasilnya seri!";
+  } else if (playerChoice === "gunting") {
+    if (computerChoice === "kertas") {
+      result = "Kamu menang!";
+    } else {
+      result = "Kamu kalah!";
+    }
+  } else if (playerChoice === "batu") {
+    if (computerChoice === "gunting") {
+      result = "Kamu menang!";
+    } else {
+      result = "Kamu kalah!";
+    }
+  } else if (playerChoice === "kertas") {
+    if (computerChoice === "batu") {
+      result = "Kamu menang!";
+    } else {
+      result = "Kamu kalah!";
+    }
+  } else {
+    result = "Masukkan pilihan yang benar!";
+  }
+  alert(result);
+</script>
