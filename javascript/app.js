@@ -63,6 +63,33 @@
 //   localStorage.setItem("todos", JSON.stringify(todos));
 // }
 
+// const form = document.querySelector(".form");
+// const input = document.querySelector("#todo-input");
+// const todoList = document.querySelector("#todo-list");
+
+// function addTodoItem(event) {
+//   event.preventDefault();
+//   const todoText = input.value;
+//   input.value = "";
+//   const todoItem = { text: todoText };
+
+//   fetch("https://crudcrud.com/api/1c0e0355ae2844d080ba6ce10bdefaf0/mahasiswa", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(todoItem),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       const li = document.createElement("li");
+//       li.textContent = data.text;
+//       todoList.appendChild(li);
+//     })
+//     .catch((error) => console.error(error));
+// }
+// form.addEventListener("submit", addTodoItem);
+
 const form = document.querySelector(".form");
 const input = document.querySelector("#todo-input");
 const todoList = document.querySelector("#todo-list");
@@ -88,4 +115,49 @@ function addTodoItem(event) {
     })
     .catch((error) => console.error(error));
 }
+
+function updateTodoItem(id, newText) {
+  const todoItem = { text: newText };
+
+  fetch(
+    `https://crudcrud.com/api/1c0e0355ae2844d080ba6ce10bdefaf0/mahasiswa/${id}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(todoItem),
+    }
+  )
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
+}
+
+function deleteTodoItem(id) {
+  fetch(
+    `https://crudcrud.com/api/1c0e0355ae2844d080ba6ce10bdefaf0/mahasiswa/${id}`,
+    {
+      method: "DELETE",
+    }
+  )
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
+}
+
+function loadTodoItems() {
+  fetch("https://crudcrud.com/api/1c0e0355ae2844d080ba6ce10bdefaf0/mahasiswa")
+    .then((response) => response.json())
+    .then((data) => {
+      for (const item of data) {
+        const li = document.createElement("li");
+        li.textContent = item.text;
+        todoList.appendChild(li);
+      }
+    })
+    .catch((error) => console.error(error));
+}
+
 form.addEventListener("submit", addTodoItem);
+loadTodoItems();

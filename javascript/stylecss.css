@@ -1,0 +1,183 @@
+body {
+  background-color: tan;
+  color: white;
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+    color: white;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: transparent;
+  color: #ddd;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+}
+
+.topnav a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav .satu {
+  margin: 0 auto;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.header {
+  background-color: #9933cc;
+  margin-top: 2px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+}
+.header p {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+  margin: 1em;
+  padding: 1em;
+  width: calc(33.33% - 2em);
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 1em;
+}
+
+.card-title,
+.card-text {
+  color: black;
+}
+
+.card-link {
+  display: block;
+  margin-top: 1em;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.artikel {
+  flex: 1 1 70%;
+}
+
+.aside {
+  background-color: #33b5e5;
+  color: #ffffff;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  flex: 1 1 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 10px 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav .dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: #33b5e5;
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+nav .dropdown:hover ul {
+  display: block;
+  margin: 0;
+  padding: 10px;
+}
+
+nav .dropdown ul li {
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .topnav a {
+    float: none;
+    width: auto;
+    display: block;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    display: block;
+    flex-direction: column;
+  }
+
+  .card-image {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .card-content {
+    max-width: 100%;
+  }
+
+  .col-2,
+  .col-3 {
+    float: none;
+    width: 100%;
+  }
+}
