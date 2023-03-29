@@ -71,6 +71,30 @@ html {
   padding: 14px 16px;
   text-decoration: none;
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 1em;
+}
+
+.card-title,
+.card-text {
+  color: black;
+}
+
+.card-link {
+  display: block;
+  margin-top: 1em;
+  border-radius: 2px;
+}
 
 .aside {
   background-color: whitesmoke;
@@ -124,31 +148,6 @@ html {
   .container {
     flex-direction: column;
   }
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card-image {
-  width: 100%;
-  border-radius: 5px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: 1em;
-}
-
-.card-title,
-.card-text {
-  color: black;
-}
-
-.card-link {
-  display: block;
-  margin-top: 1em;
-  border-radius: 2px;
 }
 
 @media only screen and (min-width: 768px) {
